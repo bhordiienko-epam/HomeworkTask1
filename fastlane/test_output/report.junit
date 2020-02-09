@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='HomeworkTask1Tests.xctest' tests='12' failures='0'>
+  <testsuite name='HomeworkTask1Tests.ListViewModelTests' tests='5' failures='0'>
+    <testcase classname='HomeworkTask1Tests.ListViewModelTests' name='testItemsForCells' time='0.006'/>
+    <testcase classname='HomeworkTask1Tests.ListViewModelTests' name='testModelLoading' time='0.003'/>
+    <testcase classname='HomeworkTask1Tests.ListViewModelTests' name='testNumberOfCells' time='0.004'/>
+    <testcase classname='HomeworkTask1Tests.ListViewModelTests' name='testOnViewDidLoad' time='0.001'/>
+    <testcase classname='HomeworkTask1Tests.ListViewModelTests' name='testViewWasUpdated' time='0.001'/>
+  </testsuite>
+  <testsuite name='HomeworkTask1Tests.LogInCoordinatorTestsTests' tests='2' failures='0'>
+    <testcase classname='HomeworkTask1Tests.LogInCoordinatorTestsTests' name='testShowListScreen' time='0.001'/>
+    <testcase classname='HomeworkTask1Tests.LogInCoordinatorTestsTests' name='testStart' time='0.001'/>
+  </testsuite>
+  <testsuite name='HomeworkTask1Tests.LogInViewModelTests' tests='5' failures='0'>
+    <testcase classname='HomeworkTask1Tests.LogInViewModelTests' name='testOnViewDidLoad' time='0.001'/>
+    <testcase classname='HomeworkTask1Tests.LogInViewModelTests' name='testSignInWithCorrectCreds' time='0.001'/>
+    <testcase classname='HomeworkTask1Tests.LogInViewModelTests' name='testSignInWithoutCreds' time='0.002'/>
+    <testcase classname='HomeworkTask1Tests.LogInViewModelTests' name='testSignInWithoutLogIn' time='0.001'/>
+    <testcase classname='HomeworkTask1Tests.LogInViewModelTests' name='testSignInWithoutPassword' time='0.001'/>
+  </testsuite>
+</testsuites>

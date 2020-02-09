@@ -1,0 +1,75 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+
+APP_VERSION = get_version_number(xcodeproj: "HomeworkTask1.xcodeproj")
+SCHEME = "HomeworkTask1"
+SLACK_URL = "https://hooks.slack.com/services/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"
+
+default_platform(:ios)
+
+platform :ios do
+   desc "Runs all the tests"
+   lane :build do
+	on_success("Started building")
+
+       	begin
+	   xcbuild
+           test_lane()
+           on_success("Built")
+       rescue => exception
+           on_error(exception)
+       end
+   end
+end
+
+
+### Methods
+
+def test_lane
+   clear_derived_data
+   scan(scheme: SCHEME, configuration: "Debug")
+end
+
+def on_error(exception)
+   slack(
+       message: "Some thing goes wrong",
+       success: false,
+       slack_url: SLACK_URL,
+       attachment_properties: {
+           fields: [
+               {
+                   title: "Version number",
+                   value: APP_VERSION,
+               },
+               {
+                   title: "Error message",
+                   value: exception.to_s,
+                   short: false
+               }
+           ]
+       }
+   )
+end
+
+def on_success(text) 
+	slack(
+       	message: "#{text} #{SCHEME} #{git_branch} #{APP_VERSION}",
+       	success: true,
+       	slack_url: SLACK_URL,
+   )
+end
+
+

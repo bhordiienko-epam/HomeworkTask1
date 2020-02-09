@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="fastlane.lanes">
+    
+    
+    
+      
+      <testcase classname="fastlane.lanes" name="0: get_version_number" time="0.104804">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="1: default_platform" time="0.00139">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="2: git_branch" time="0.024578">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="3: slack" time="0.96768">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="4: xcbuild" time="2.951487">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="5: clear_derived_data" time="0.376943">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="6: scan" time="109.184159">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="7: git_branch" time="0.028821">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="8: slack" time="0.743617">
+        
+      </testcase>
+    
+  </testsuite>
+</testsuites>
